@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Nature & Mosque Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="video-bg-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="video/14694954_3840_2160_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-beautiful-aerial-view-of-a-mountain-landscape-40245-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay animate__animated animate__fadeInDown">
+            <h1>EXPLORE THE <br><span>NATURAL WORLD</span></h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search country or 'Mosque'...">
+                <div id="googleSearchBox" style="display:none; margin-top:15px;">
+                    <p>Not in gallery? <button id="googleBtn">Search on Google</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Nature Gallery</h2>
+        <div class="gallery" id="imageGallery">
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="bangladesh"><img src="https://res.cloudinary.com/dp3su7bh9/image/upload/f_auto,w_800/country_thumbnails/BD"><div class="info"><h3>Sajek, Bangladesh</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="japan"><img src="https://a.cdn-hotels.com/gdcs/production75/d1996/701c9957-d6f1-45ae-a18d-e9fe7fc319ee.jpg"><div class="info"><h3>Kyoto, Japan</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="switzerland"><img src="https://cdn.britannica.com/65/162465-050-9CDA9BC9/Alps-Switzerland.jpg"><div class="info"><h3>Alps, Switzerland</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="india"><img src="https://static.vecteezy.com/system/resources/previews/022/948/376/non_2x/the-taj-mahal-is-an-ivory-white-marble-mausoleum-on-the-south-bank-of-the-yamuna-river-in-the-indian-city-of-agra-uttar-pradesh-photo.jpg"><div class="info"><h3>Taj Mahal, India</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="pakistan"><img src="https://images.unsplash.com/photo-1554939437-ecc492c67b78?w=600"><div class="info"><h3>Hunza, Pakistan</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="bhutan"><img src="https://curlytales.com/wp-content/uploads/2024/06/roadshow.jpg"><div class="info"><h3>Tiger's Nest, Bhutan</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="nepal"><img src="https://www.frolicadventure.com/uploads/package/gallery/mt.thamserku-and-khangteka-from-dole.jpg"><div class="info"><h3>Everest, Nepal</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="canada"><img src="https://i.pinimg.com/736x/eb/99/36/eb9936b19c4745758b713576d573e1ab.jpg"><div class="info"><h3>Banff, Canada</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="australia"><img src="https://cdn.britannica.com/85/95085-050-C749819D/Sydney-Opera-House-Bennelong-Point-Port-Jackson.jpg"><div class="info"><h3>Sydney, Australia</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__zoomIn" data-country="iran"><img src="https://i.pinimg.com/736x/59/2a/dc/592adc460236a04e8a244e4483f4788b.jpg"><div class="info"><h3>Persian Lake, Iran</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 80px;">Beautiful Mosques</h2>
+        <div class="gallery">
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://tse4.mm.bing.net/th/id/OIP.jD36yHiCba3sCfZBe01KdgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3"><div class="info"><h3>Sheikh Zayed, UAE</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://wallpaperaccess.com/full/2044436.jpg"><div class="info"><h3>Blue Mosque, Turkey</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://i.pinimg.com/originals/c5/e8/62/c5e8622753d7ddb24dec80737c6d0a3e.jpg"><div class="info"><h3>Badshahi, Pakistan</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://tse1.mm.bing.net/th/id/OIP.Y9hAB8OQQ6zsw1ds1cfuIgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"><div class="info"><h3>Model Mosque, Bangladesh</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://sharmersexcursions.com/wp-content/uploads/2013/06/jerusalem-excursion-from-sharm-el-sheikh.jpg"><div class="info"><h3>Al-Aqsa, Palestine</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://tse2.mm.bing.net/th/id/OIP.inB3XLTYAOmL1lfNlNViVAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"><div class="info"><h3>Putra, Malaysia</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://www.bruneitourism.com/wp-content/uploads/2020/08/3.Omar-Ali-Saifuddien-Mosque-min.jpg"><div class="info"><h3>Omar Ali, Brunei</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+            <div class="gallery-item animate__animated animate__fadeInUp" data-country="mosque"><img src="https://media.istockphoto.com/id/2147585048/photo/sultan-qaboos-grand-mosque-in-muscat-oman.jpg?s=170667a&w=0&k=20&c=-nGM8ueyxOJlPNx8I3-EKZlLKte7yeuk3mnSmCPfBA4="><div class="info"><h3>Grand Mosque, Oman</h3><div class="actions"><button onclick="openLightbox(this)">View</button><a href="#" target="_blank">Save</a></div></div></div>
+        </div>
+
+        <div class="contact-section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-form-container">
+                <form action="https://formspree.io/f/mqeypwyv" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 PIASH. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
