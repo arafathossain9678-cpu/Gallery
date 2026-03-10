@@ -1,8 +1,8 @@
 :root { 
-    --accent: #00d4ff; /* নিওন ব্লু */
-    --primary-purple: #f8f2f9; /* প্রধান বেগুনি */
-    --soft-purple: #E8D7FF; /* আপনার দেওয়া বডি কালার */
-    --card-bg: rgba(255, 255, 255, 0.9); /* হালকা সাদাটে কার্ড */
+    --accent: #00d4ff; 
+    --primary-purple: #f8f2f9; 
+    --soft-purple: #E8D7FF; 
+    --card-bg: rgba(255, 255, 255, 0.9); 
     --text-dark: #03a3bc;
 }
 
@@ -13,46 +13,30 @@ body {
     color: var(--text-dark); 
     scroll-behavior: smooth; 
 }
-/* 🎥 Full Screen Background Video */
+
 .video-bg-container {
-    position: fixed; /* ভিডিওটি স্ক্রিনে আটকে থাকবে */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2; /* সবকিছুর নিচে থাকবে */
+    z-index: -2;
     overflow: hidden;
 }
 
 #bg-video {
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* ভিডিও যেন চ্যাপ্টা না হয়ে যায় */
-    filter: brightness(0.6) saturate(1.2); /* ভিডিও কিছুটা ডার্ক করা যাতে লেখা ফুটে ওঠে */
+    object-fit: cover; 
+    filter: brightness(0.6) saturate(1.2); 
 }
 
-/* ভিডিওর উপর হালকা রঙের আস্তরণ (যাতে বেগুনি থিম ফুটে ওঠে) */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(232, 215, 255, 0.2); /* আপনার বডি কালারের হালকা শেড */
-    z-index: -1;
-}
-
-/* বডির ব্যাকগ্রাউন্ড ট্রান্সপারেন্ট রাখা */
-body {
-    background: transparent; 
-}
-
-/* 🎥 Background Video */
 #bg-video {
     position: absolute; top: 50%; left: 50%;
     min-width: 100%; min-height: 100%;
     transform: translate(-50%, -50%);
-    filter: brightness(0.5) sepia(0.2) hue-rotate(240deg); /* ভিডিওতে হালকা বেগুনি ভাব */
+    /* নিচে শুধু ব্রাইটনেস রাখা হয়েছে যাতে লেখাগুলো পরিষ্কার দেখা যায় */
+    filter: brightness(0.6); 
     z-index: -1;
     animation: zoomVideo 30s infinite alternate linear;
 }
@@ -62,9 +46,9 @@ body {
     to { transform: translate(-50%, -50%) scale(1.15); }
 }
 
-/* 🏠 Hero Section */
+
 .hero { 
-    position: relative; height: 60vh; /* উচ্চতা কিছুটা কমানো হয়েছে */
+    position: relative; height: 60vh; 
     width: 100%; display: flex; align-items: center; 
     justify-content: center; overflow: hidden; 
 }
@@ -73,8 +57,8 @@ body {
 .hero-overlay h1 { font-size: 3.5rem; color: white; text-shadow: 2px 4px 10px rgba(0,0,0,0.3); }
 .hero-overlay h1 span { color: var(--accent); text-shadow: 0 0 15px var(--accent); }
 
-/* 🔍 Search Bar (Gap Reduced) */
-.search-container { margin-top: 15px; } /* গ্যাপ কমানো হয়েছে */
+
+.search-container { margin-top: 15px; } 
 
 #searchInput { 
     width: 380px; padding: 15px 25px; border-radius: 50px; 
@@ -96,7 +80,7 @@ body {
     cursor: pointer; font-weight: bold; margin-top: 10px;
 }
 
-/* 🖼️ Gallery Grid */
+
 .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
 .section-title { 
     text-align: center; margin-bottom: 35px; 
@@ -109,7 +93,7 @@ body {
 .gallery-item { 
     background: white; border-radius: 20px; overflow: hidden; 
     border: none; transition: 0.4s ease-in-out;
-    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.1); /* হালকা বেগুনি শ্যাডো */
+    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.1);
 }
 
 .gallery-item:hover { 
@@ -130,21 +114,20 @@ body {
     font-weight: bold; font-size: 0.85rem; transition: 0.3s;
 }
 
-/* View Button */
+
 .actions button { 
     background: linear-gradient(135deg, var(--accent), #00a8cc); 
     color: white; 
 }
 .actions button:hover { opacity: 0.8; transform: scale(1.05); }
 
-/* Save Button */
+
 .actions a { 
     background: #f0f0f0; color: var(--text-dark); 
 }
 .actions a:hover { background: var(--soft-purple); }
 
-/* 💡 Lightbox */
-/* 💡 Classic Animated Lightbox Fix */
+
 .lightbox { 
     position: fixed; 
     top: 0; left: 0; 
@@ -156,13 +139,13 @@ body {
     align-items: center; 
     justify-content: center; 
     
-    /* শুরুতে হাইড থাকবে */
+    
     opacity: 0; 
     pointer-events: none; 
     transition: all 0.4s ease; 
 }
 
-/* যখন ওপেন হবে */
+
 .lightbox.show { 
     opacity: 1; 
     pointer-events: auto; 
@@ -174,12 +157,11 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 50px rgba(0, 212, 255, 0.4);
     
-    /* ক্লাসিক জুম ইফেক্ট */
     transform: scale(0.5); 
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-/* ওপেন অবস্থায় ইমেজ জুম হবে */
+
 .lightbox.show #lightbox-img { 
     transform: scale(1); 
 }
@@ -188,7 +170,7 @@ body {
     position: absolute; top: 30px; right: 50px; 
     font-size: 50px; color: white; cursor: pointer; 
 }
-/* Contact Form Styling */
+
 .contact-section {
     padding: 50px 0;
     max-width: 600px;
@@ -234,7 +216,7 @@ body {
     transform: scale(1.02);
 }
 
-/* Footer Styling */
+
 footer {
     padding: 40px 0;
     text-align: center;
